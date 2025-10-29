@@ -16,7 +16,7 @@
             font-family: 'Inter', sans-serif;
             height: 100vh;
             touch-action: manipulation;
-             background: linear-gradient(135deg, #a2d9ff, #e0f7ff);
+            background: linear-gradient(135deg, #a2d9ff, #e0f7ff);
         }
 
         #app {
@@ -184,34 +184,13 @@
                 <p class="text-xl text-gray-700 mb-8">I made something special for you...</p>
                 <button class="btn" id="start-btn">Let's Begin</button>
             </div>
-            <!-- audio player tersembunyi -->
-<audio id="bg-music" src="lany you.m4a" loop></audio>
 
-<script>
-    // === MUSIC LOGIC ===
-    const bgMusic = document.getElementById('bg-music');
-    const startBtn = document.getElementById('start-btn');
-
-    // coba autoplay (kadang diblok, tapi ga papa dicoba)
-    bgMusic.play().catch(() => {
-        // kalau diblok browser, nanti bakal jalan pas tombol diklik
-        console.log("autoplay blocked, will play on click");
-    });
-
-    // pas tombol "Let's Begin" diklik, paksa play
-    startBtn.addEventListener('click', () => {
-        bgMusic.play();
-    });
-</script>
-</body>
-</html>
-</body>
             <!-- Step 2: Birthday Message -->
             <div class="step" id="step2">
                 <div class="emoji">🎉</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Happy Birthday!</h2>
                 <p class="text-lg text-gray-700 mb-6">
-                    November 10th, 2025 — your 22nd birthday. On your special day, I want you to know how incredible, precious, and meaningful you are to me. 
+                    November 10th, 2025 — your 22nd birthday. On your special day, I want you to know how incredible, precious, and meaningful you are to me.
                     Your smile, your laughter, and every little thing about you — I adore them all🥹🫶🏻
                 </p>
                 <button class="btn" id="next-btn-2">What makes you special?</button>
@@ -241,50 +220,49 @@
             </div>
 
             <!-- Step 4: Memory Lane -->
-<div class="step" id="step4">
-    <div class="emoji">📸</div>
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Remember When...</h2>
+            <div class="step" id="step4">
+                <div class="emoji">📸</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">Remember When...</h2>
 
-    <div class="bg-gradient-to-r from-pink-200 to-rose-200 rounded-xl p-8 mb-8 flex flex-col md:flex-row gap-6 justify-center items-center shadow-lg">
+                <div class="bg-gradient-to-r from-pink-200 to-rose-200 rounded-xl p-8 mb-8 flex flex-col md:flex-row gap-6 justify-center items-center shadow-lg">
 
-        <!-- FOTO KALIAN -->
-        <div class="relative">
-            <img src="ultah alfi github.jpg" 
-                 alt="our moment"
-                 class="rounded-xl shadow-xl w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-white/60">
-            
-            <!-- hiasan love kecil di pojok -->
-            <div class="absolute -top-3 -right-3 bg-white/80 backdrop-blur-md text-pink-500 text-xl rounded-full px-3 py-1 shadow">
-                ❤️
+                    <!-- FOTO -->
+                    <div class="relative">
+                        <img src="ultah alfi github.jpg"
+                             alt="our moment"
+                             class="rounded-xl shadow-xl w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-white/60">
+
+                        <!-- love badge -->
+                        <div class="absolute -top-3 -right-3 bg-white/80 backdrop-blur-md text-pink-500 text-xl rounded-full px-3 py-1 shadow">
+                            ❤️
+                        </div>
+                    </div>
+
+                    <!-- CAPTION -->
+                    <div class="text-center md:text-left max-w-xs">
+                        <p class="text-lg text-gray-700 italic leading-relaxed">
+                            "This is one of my favorite versions of us."
+                        </p>
+                        <p class="text-sm text-gray-600 mt-2">
+                            (You, being the reason my day is better)
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-700 mb-6 px-2">
+                    Every moment with you means so much to me. I truly cherish the time I get to spend by your side — it feels like the world becomes softer, brighter, and somehow easier to live in.
+                    Thank you, for being the warmth I didn’t know I needed.
+                </p>
+
+                <button class="btn" id="next-btn-4">One Last Thing</button>
             </div>
-        </div>
-
-        <!-- CAPTION -->
-        <div class="text-center md:text-left max-w-xs">
-            <p class="text-lg text-gray-700 italic leading-relaxed">
-                "This is one of my favorite versions of us."
-            </p>
-            <p class="text-sm text-gray-600 mt-2">
-                (You, being the reason my day is better)
-            </p>
-        </div>
-    </div>
-
-    <p class="text-lg text-gray-700 mb-6 px-2">
-        Every moment with you means so much to me. I truly cherish the time I get to spend by your side — it feels like the world becomes softer, brighter, and somehow easier to live in. 
-        Thank you, for being the warmth I didn’t know I needed.
-    </p>
-
-    <button class="btn" id="next-btn-4">One Last Thing</button>
-</div>
-
 
             <!-- Step 5: Final Wish -->
             <div class="step" id="step5">
                 <div class="emoji">🎂</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">My Wish For You</h2>
                 <p class="text-lg text-gray-700 mb-8">
-                    I hope this year and all the years ahead bring you endless happiness, good health, and ease in everything you do. May every dream you hold close to your heart come true. I hope you always remember that you are special and precious to me. 
+                    I hope this year and all the years ahead bring you endless happiness, good health, and ease in everything you do. May every dream you hold close to your heart come true. I hope you always remember that you are special and precious to me.
                     I’m so proud of you — always. You’re amazing and truly incredible. Thank you for coming into my life and becoming a beautiful color I never expected to find.
                 </p>
                 <p class="text-xl font-semibold text-pink-600 mb-8">
@@ -295,6 +273,10 @@
             </div>
         </div>
     </div>
+
+    <!-- hidden audio player -->
+    <!-- GANTI namalagu.m4a DENGAN NAMA FILE LAGU KAMU YANG SEBENARNYA -->
+    <audio id="bg-music" src="lany you.m4a" loop></audio>
 
     <script>
         // Three.js Heart Background
@@ -328,7 +310,7 @@
 
         const heartGeometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings);
 
-        // Create multiple hearts with different colors and properties
+        // Create multiple hearts
         const hearts = [];
         const colors = [
             0xff6b6b, 0xff8e8e, 0xffb3b3, 0xffd8d8,
@@ -347,7 +329,6 @@
 
             const heart = new THREE.Mesh(heartGeometry, material);
 
-            // Random position and scale
             heart.position.x = (Math.random() - 0.5) * 50;
             heart.position.y = (Math.random() - 0.5) * 50;
             heart.position.z = (Math.random() - 0.5) * 50;
@@ -355,11 +336,9 @@
             const scale = Math.random() * 0.8 + 0.5;
             heart.scale.set(scale, scale, scale);
 
-            // Random rotation
             heart.rotation.x = Math.random() * Math.PI;
             heart.rotation.y = Math.random() * Math.PI;
 
-            // Store animation properties
             heart.userData = {
                 speedX: Math.random() * 0.02 - 0.01,
                 speedY: Math.random() * 0.02 - 0.01,
@@ -376,7 +355,7 @@
             hearts.push(heart);
         }
 
-        // Add lights
+        // Lights
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
         scene.add(ambientLight);
 
@@ -388,15 +367,12 @@
         function animate() {
             requestAnimationFrame(animate);
 
-            // Animate hearts
             hearts.forEach(heart => {
-                // Floating animation
                 const time = Date.now() * 0.001;
                 heart.position.x = heart.userData.originalX + Math.sin(time * heart.userData.speedX * 10) * heart.userData.floatDistance;
                 heart.position.y = heart.userData.originalY + Math.sin(time * heart.userData.speedY * 10) * heart.userData.floatDistance;
                 heart.position.z = heart.userData.originalZ + Math.sin(time * heart.userData.speedZ * 10) * heart.userData.floatDistance;
 
-                // Rotation
                 heart.rotation.x += heart.userData.rotationSpeedX;
                 heart.rotation.y += heart.userData.rotationSpeedY;
             });
@@ -423,27 +399,30 @@
         }
 
         function showStep(stepNumber) {
-            // Hide all steps
             document.querySelectorAll('.step').forEach(step => {
                 step.classList.remove('active');
             });
 
-            // Show current step
             document.getElementById(`step${stepNumber}`).classList.add('active');
 
-            // Update progress bar
             updateProgressBar();
 
-            // Special effect for last step
             if (stepNumber === totalSteps) {
                 document.getElementById('confetti-btn').classList.add('animate-pulse');
             }
         }
 
         // Button event listeners
-        document.getElementById('start-btn').addEventListener('click', () => {
+        const startBtn = document.getElementById('start-btn');
+        startBtn.addEventListener('click', () => {
             currentStep = 2;
             showStep(currentStep);
+
+            // try playing music on first interaction
+            const bgMusic = document.getElementById('bg-music');
+            bgMusic.play().catch(() => {
+                console.log("autoplay blocked until user gesture");
+            });
         });
 
         document.getElementById('next-btn-2').addEventListener('click', () => {
@@ -463,7 +442,6 @@
 
         // Confetti button
         document.getElementById('confetti-btn').addEventListener('click', () => {
-            // Standard confetti
             confetti({
                 particleCount: 150,
                 spread: 70,
@@ -471,7 +449,6 @@
                 colors: ['#ff0000', '#ff69b4', '#ff1493', '#ffc0cb']
             });
 
-            // Heart-shaped confetti
             setTimeout(() => {
                 confetti({
                     particleCount: 30,
@@ -482,7 +459,6 @@
                 });
             }, 300);
 
-            // More hearts from different directions
             setTimeout(() => {
                 confetti({
                     particleCount: 20,
@@ -503,7 +479,6 @@
                 });
             }, 600);
 
-            // Make hearts float up from the background
             hearts.forEach(heart => {
                 gsap.to(heart.position, {
                     y: heart.position.y - 30,
@@ -523,5 +498,4 @@
         updateProgressBar();
     </script>
 </body>
-
 </html>
