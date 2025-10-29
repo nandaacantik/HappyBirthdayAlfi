@@ -184,19 +184,27 @@
                 <p class="text-xl text-gray-700 mb-8">I made something special for you...</p>
                 <button class="btn" id="start-btn">Let's Begin</button>
             </div>
-            <!-- ✨ TARUH INI DI SINI ✨ -->
-    <audio id="bg-music" src="lany you.m4a" autoplay loop></audio>
+            <!-- audio player tersembunyi -->
+<audio id="bg-music" src="lany you.m4a" loop></audio>
 
-    <!-- jangan taruh di luar <body> ya -->
-    <script>
-        // semua script kamu (Three.js, confetti, dsb)
+<script>
+    // === MUSIC LOGIC ===
+    const bgMusic = document.getElementById('bg-music');
+    const startBtn = document.getElementById('start-btn');
 
-        // 🎵 kode tambahan buat aktifin musik pas klik tombol
-        const bgMusic = document.getElementById('bg-music');
-        document.getElementById('start-btn').addEventListener('click', () => {
-            bgMusic.play();
-        });
-    </script>
+    // coba autoplay (kadang diblok, tapi ga papa dicoba)
+    bgMusic.play().catch(() => {
+        // kalau diblok browser, nanti bakal jalan pas tombol diklik
+        console.log("autoplay blocked, will play on click");
+    });
+
+    // pas tombol "Let's Begin" diklik, paksa play
+    startBtn.addEventListener('click', () => {
+        bgMusic.play();
+    });
+</script>
+</body>
+</html>
 </body>
             <!-- Step 2: Birthday Message -->
             <div class="step" id="step2">
